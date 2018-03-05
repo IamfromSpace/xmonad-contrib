@@ -69,7 +69,7 @@ multiDishes h s nmaster dishesPerStack n = if n <= nmaster
                         else ws
  where
     (filledDishStackCount, remainder) =
-      (n - nmaster) `quotRem` (min 1 dishesPerStack)
+      (n - nmaster) `quotRem` dishesPerStack
 
     (firstDepth, dishStackCount) =
       if remainder == 0 then
